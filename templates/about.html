@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <h1>About Page</h1>
+{% endblock%}
+
+{% block body %}
+    <p>
+        This is the about page. This is where you can learn more about the blog and the author.
+        {{autor}}
+    </p>
+    <a href= "{{ url_for('index') }}">Go Back</a>
+{% endblock %}

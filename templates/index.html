@@ -6,5 +6,12 @@
 {%block body%}
     <h1>The Intiation</h1>
     <p>Looking back at the start of the program we were introduced to new ways of working ways that were thought to be un attainable in todays 
-        Society. </p>
+        Society.
+    </p>
+    <form action="{{ url_for('hello') }}" method="post">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="submit" value="Submit">
+    </form>
+    
+
 {%endblock%}
