@@ -1,13 +1,24 @@
 {% extends "base.html" %}
 
-{% block head %}
+{% block title %}
     <h1>About Page</h1>
 {% endblock%}
 
-{% block body %}
+{% block content %}
     <p>
         This is the about page. This is where you can learn more about the blog and the author.
-        {{autor}}
+        {% for i in articles %}
+            <div class="card">
+                <h2 class="card-header">
+                    <span class="card-title">{{i.title}}</span>
+                    <button class="card-action">Action</button>
+                </h2>
+                
+                <div class="card-content">
+                    <p>{{i.details}}</p>
+                </div>
+            </div>
+        {%endfor%}
     </p>
     <a href= "{{ url_for('index') }}">Go Back</a>
 {% endblock %}
