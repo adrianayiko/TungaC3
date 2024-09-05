@@ -1,9 +1,17 @@
 {% extends "base.html" %}
-{%block head%}
-    <h1> Welcome! </h1>
+{%block title%}
+    Welcome! 
 {% endblock %}
-{%block body%}
-    <h1>{{ name }}</h1>
+{%block content%}
+    <form action="/form" method="post">
+        <label for="author">Your Name:</label>
+        <input type="text" id="author" name="author"><br><br>
+        <label for="author">Article Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="author">Content:</label>
+        <input type="text" id="details" name="details"><br><br>
+        <input type="submit" value="Post Article">
 
-    <a href="{{ url_for('about') }}">See More</a>
+    </form>
+    <button style = "text-align"<a href="{{ url_for('about') }}">View Article</a>
 {%endblock%}
