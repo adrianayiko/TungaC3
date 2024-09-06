@@ -14,7 +14,7 @@
                     
                     <span class="card-author">By: {{ i.author}}</span>
                 </h2>
-                    
+                <img src="{{ url_for('static', filename='images/' + i.image) }}" alt="Article Image" class="card-image">  
                 <div class="card-content">
                     <p>{{i.details}}</p>
                 </div>
