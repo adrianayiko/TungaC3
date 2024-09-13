@@ -25,9 +25,10 @@ def form():
         author = request.form['author']
         title = request.form['title']
         details = request.form['details']
+        image = request.form['image']
         
         #add article to list 
-        articles.append({"title": title, "author": author, "details":details})
+        articles.append({"title": title, "author": author, "details":details,"image":image})
         
     return render_template('form.html')
     
